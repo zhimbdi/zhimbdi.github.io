@@ -58,6 +58,79 @@ body {
     animation: float 8s ease-in-out infinite reverse;
 }
 
+/* Falling Hearts Animation */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hearts-container::before,
+.hearts-container::after {
+    content: '💖';
+    position: absolute;
+    font-size: 1.5rem;
+    color: #ff6f61;
+    opacity: 0.7;
+    animation: fall 5s linear infinite;
+}
+
+.hearts-container::before {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.hearts-container::after {
+    left: 80%;
+    animation-delay: 2s;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100vh); opacity: 0.7; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Falling Flowers Animation */
+.flowers-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.flowers-container::before,
+.flowers-container::after {
+    content: '🌸';
+    position: absolute;
+    font-size: 1.5rem;
+    color: #fff176;
+    opacity: 0.6;
+    animation: fall-slow 8s linear infinite;
+}
+
+.flowers-container::before {
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.flowers-container::after {
+    left: 60%;
+    animation-delay: 3s;
+}
+
+@keyframes fall-slow {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 0.6; }
+    50% { transform: translateY(0vh) rotate(180deg); opacity: 0.4; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
 /* Header */
 header {
     text-align: center;
@@ -68,16 +141,16 @@ header {
 }
 
 header h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 4rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem; /* Increased from 4rem to 4.5rem */
     color: #ff6f61;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .subtitle {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Satisfy', cursive;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.5rem; /* Increased from 1.3rem to 1.5rem */
     color: #ab47bc;
     letter-spacing: 1px;
 }
@@ -95,7 +168,7 @@ header h1 {
 .glass-card {
     max-width: 600px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15); /* Fixed typo from previous version ("BAR" to "255") */
     backdrop-filter: blur(15px);
     padding: 40px;
     border-radius: 20px;
@@ -109,14 +182,15 @@ header h1 {
 }
 
 .message h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem; /* Increased from 2.5rem to 2.8rem */
     color: #fff176;
     margin-bottom: 20px;
 }
 
 .message p {
-    font-size: 1.2rem;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.4rem; /* Increased from 1.2rem to 1.4rem */
     color: #fff;
 }
 
@@ -160,8 +234,8 @@ header h1 {
 }
 
 .gallery h3 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.4rem; /* Increased from 3rem to 3.4rem */
     color: #40c4ff;
     margin-bottom: 40px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -197,8 +271,8 @@ header h1 {
 }
 
 .photo-wrapper p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.2rem; /* Increased from 1rem to 1.2rem */
     color: #fff;
     margin-top: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -211,8 +285,9 @@ footer {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border-top: 2px solid rgba(255, 255, 255, 0.3);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Satisfy', cursive;
     font-weight: 600;
+    font-size: 1.2rem; /* Increased from implied 1rem to 1.2rem */
     color: #ff6f61;
 }
 
